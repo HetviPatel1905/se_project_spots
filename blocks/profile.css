@@ -28,7 +28,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical
+  -webkit-box-orient: vertical;
   max-width: 420px;
 }
 
@@ -104,7 +104,6 @@
   .profile {
     flex-direction: column;
     max-width: 288px;
-    min-height: 274px;
     align-items: center;
     padding: 20px 0 20px;
   }
@@ -126,7 +125,6 @@
     max-width: 288px;
     font-size: 20px;
     line-height: 20px;
-
   }
 
   .profile__description {
