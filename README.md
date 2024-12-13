@@ -15,10 +15,12 @@ Spots is a photo-sharing app where you can capture, share, and explore stunning 
 
 ## Images
 
+link for images:
 ![Alt text](./demo/all_images/)
 
 ## Deployment
 
 This webpage is deployed to Github Pages.
 
-- Deployment Link: [link]https://hetvipatel1905.github.io/se_project_spots/
+- Deployment Link:
+  [link]https://hetvipatel1905.github.io/se_project_spots/
