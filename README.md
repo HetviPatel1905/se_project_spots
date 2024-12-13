@@ -16,6 +16,7 @@ Spots is a photo-sharing app where you can capture, share, and explore stunning 
 ## Images
 
 - link for images = ![Alt text](./images/)
+- link for video giving overview of my project = [link](https://drive.google.com/file/d/1-5DnELb7-9pUaKIWhG1Jisj9Tm2PPpU_/view?usp=sharing)
 
 ## Deployment
 

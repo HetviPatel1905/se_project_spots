@@ -2,13 +2,15 @@
   display: flex;
   justify-content: center;
   padding: 60px 0;
+  white-space: nowrap;
 }
 
-.footer__copyright {
+.footer__title {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  height: 16px;
-  width: 104px;
+  max-width: 104px;
+  opacity: 0.7;
+  margin: 0;
 }

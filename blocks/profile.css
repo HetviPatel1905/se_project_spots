@@ -9,6 +9,7 @@
   height: 190px;
   width: 190px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -21,7 +22,6 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 32px;
-  height: 32px;
   max-width: 420px;
   margin: 0 0 12px;
   text-overflow: ellipsis;
@@ -37,8 +37,6 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  height: 16px;
-  width: 97px;
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -59,7 +57,7 @@
   display: flex;
 }
 
-.profile__edit_text {
+.profile__edit-text {
   width: 84px;
   height: 16px;
   margin: 0;
@@ -92,7 +90,7 @@
   cursor: pointer;
 }
 
-.profile__add_text {
+.profile__add-text {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -124,10 +122,6 @@
 
   .profile__name {
     margin: 12px 0 6px;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -138,10 +132,6 @@
 
   .profile__description {
     margin: 0 0 32px;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 16px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -157,6 +147,5 @@
   .profile__add-btn {
     width: 288px;
     height: 52px;
-    border-radius: 80px;
   }
 }
