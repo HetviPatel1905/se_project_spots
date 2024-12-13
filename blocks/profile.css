@@ -26,7 +26,9 @@
   margin: 0 0 12px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical
   max-width: 420px;
 }
 
@@ -123,6 +125,8 @@
     margin: 12px 0 6px;
     max-width: 288px;
     font-size: 20px;
+    line-height: 20px;
+
   }
 
   .profile__description {

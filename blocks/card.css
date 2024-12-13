@@ -62,6 +62,7 @@
   .card__title {
     font-size: 16px;
     max-width: 250px;
+    line-height: 16px;
   }
 
   .card__like-btn {
