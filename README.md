@@ -15,19 +15,7 @@ Spots is a photo-sharing app where you can capture, share, and explore stunning 
 
 ## Images
 
-![plot](./images/1-photo-by-moritz-feldmann-from-pexels.jpg)
-![plot](./images/2-photo-by-ceiline-from-pexels.jpg)
-![plot](./images/3-photo-by-tubanur-dogan-from-pexels.jpg)
-![plot](./images/4-photo-by-maurice-laschet-from-pexels.jpg)
-![plot](./images/5-photo-by-van-anh-nguyen-from-pexels.jpg)
-![plot](./images/6-photo-by-moritz-feldmann-from-pexels.jpg)
-![plot](./images/avatar.jpg)
-![plot](./images/Footer.svg)
-![plot](./images/hearthover.svg)
-![plot](./images/like_heart.svg)
-![plot](./images/logoo.svg)
-![plot](./images/new_post.svg)
-![plot](./images/pencil.svg)
+![Alt text](./demo/all_images/)
 
 ## Deployment
 
