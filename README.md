@@ -4,7 +4,7 @@ An image sharing site.
 
 ## Description
 
-Spots is a photo-sharing app where you can capture, share, and explore stunning images. Upload your photos, add captions, and connect with a global community by liking and commenting on posts. Available on both mobile and desktop, Spots makes it easy to share your moments wherever you are. Join today and discover the beauty in the world through the lens of others!
+Spots is a photo-sharing app where you can capture, share, and explore stunning images. Upload your photos, add captions, and connect with a global community by liking on posts. Available on both mobile and desktop, Spots makes it easy to share your moments wherever you are. Join today and discover the beauty in the world through the lens of others!
 
 ## Tech Stack
 
