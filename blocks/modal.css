@@ -12,7 +12,7 @@
   visibility: hidden;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -35,20 +35,22 @@
   background-image: url(../images/close_btn.svg);
   background-position: center;
   opacity: 0.4;
-  border: 2px;
   padding: 0;
   margin: 0;
 }
 
-.modal__close-btn_image {
+.modal__close-btn__image {
   height: 23px;
   width: 23px;
   margin: 4px 3px 3px 4px;
   padding: 0;
+  outline: none;
+  border: none;
 }
 
 .modal__close-btn:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .modal__title {
@@ -110,6 +112,10 @@
   background-color: rgba(33, 33, 33, 1);
   color: #fff;
   padding: 18px 0;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
 }
 
 .modal__submit-btn__text {
