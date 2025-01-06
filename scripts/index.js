@@ -66,7 +66,7 @@ function getCardElement(data) {
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
-  // select the delete button
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
@@ -76,8 +76,11 @@ function getCardElement(data) {
     cardLikeBtn.classList.toggle("card__like-btn_liked");
   });
 
-  // set listener to delete button
-  // handler should remove the xard from DOM
+  cardDeleteBtn.addEventListener("click", () => {
+    console.log(cardElement);
+    cardElement.remove();
+  });
+
   return cardElement;
 }
 
