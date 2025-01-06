@@ -55,7 +55,6 @@
   white-space: nowrap;
   display: flex;
   gap: 8px;
-  display: flex;
 }
 
 .profile__edit-btn:hover {

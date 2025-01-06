@@ -63,9 +63,7 @@
 
       <div class="modal" id="profile-edit-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn">
-            <span class="modal__close-btn__image"></span>
-          </button>
+          <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit Profile</h2>
           <form name="edit-profile" class="modal__form" id="profile-form">
             <label for="profile-name-input" class="modal__label">
@@ -97,9 +95,7 @@
 
       <div class="modal" id="profile-add-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn">
-            <span class="modal__close-btn__image"></span>
-          </button>
+          <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New Post</h2>
           <form name="edit-profile" class="modal__form" id="profile-add-form">
             <label for="profile-add-image-input" class="modal__label">
@@ -129,6 +125,20 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" id="preview-modal">
+      <div class="modal__container modal__container_preview">
+        <button
+          type="submit"
+          class="modal__close-btn modal__close-btn_preview"
+        ></button>
+        <img src="" alt="" class="modal__image_preview" />
+        <div class="modal__caption_wrapper">
+          <p class="modal__caption_preview"></p>
+        </div>
+      </div>
+    </div>
+
     <script defer src="./scripts/index.js"></script>
   </body>
 </html>
