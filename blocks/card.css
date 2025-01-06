@@ -31,21 +31,30 @@
 }
 
 .card__like-btn {
-  background-image: url(../images/like-btn.svg);
+  background: transparent url(../images/lightblackheart.svg) center no-repeat;
   background-size: contain;
-  background-repeat: no-repeat;
   height: 20px;
   width: 23px;
-  background-color: transparent;
   border: none;
   padding: 0;
   margin: 0;
   opacity: 0.4;
+  box-shadow: none;
 }
 
 .card__like-btn:hover {
   cursor: pointer;
   opacity: 1;
+  background: transparent url(../images/darkblackheart.svg) center no-repeat;
+}
+
+.card__like-btn_liked {
+  background: transparent url(../images/darkredheart.svg) center no-repeat;
+  opacity: 1;
+}
+
+.card__like-btn_liked:hover {
+  background: transparent url(../images/lightredheart.svg) center no-repeat;
 }
 
 @media screen and (max-width: 627px) {

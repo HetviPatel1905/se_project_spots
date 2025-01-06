@@ -1,4 +1,4 @@
-const initialcards = [
+const initialCards = [
   {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
@@ -25,22 +25,36 @@ const initialcards = [
   },
 ];
 
+// profile
 const profileEditButton = document.querySelector(".profile__edit-btn");
+const profileAddButton = document.querySelector(".profile__add-btn");
+const profileName = document.querySelector(".profile__name");
+const profileDescription = document.querySelector(".profile__description");
+
+// forms
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileEditModalCloseBtn =
   profileEditModal.querySelector(".modal__close-btn");
-
-const profileName = document.querySelector(".profile__name");
+const profileForm = document.forms["profile-form"];
 const profileEditNameInput = profileEditModal.querySelector(
   "#profile-name-input"
 );
-
-const profileDescription = document.querySelector(".profile__description");
 const profileEditDescriptonInput = profileEditModal.querySelector(
   "#profile-description-input"
 );
 
-const profileForm = document.forms["profile-form"];
+const profileAddModal = document.querySelector("#profile-add-modal");
+const profileAddModalCloseBtn =
+  profileAddModal.querySelector(".modal__close-btn");
+const profileAddForm = document.forms["profile-add-form"];
+const profileAddImageInput = profileAddModal.querySelector(
+  "#profile-add-image-input"
+);
+const profileAddCaptionInput = profileAddModal.querySelector(
+  "#profile-add-caption-input"
+);
+
+// card
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
@@ -51,36 +65,68 @@ function getCardElement(data) {
 
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
+  const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+  // select the delete button
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
+  cardLikeBtn.addEventListener("click", () => {
+    cardLikeBtn.classList.toggle("card__like-btn_liked");
+  });
+
+  // set listener to delete button
+  // handler should remove the xard from DOM
   return cardElement;
 }
 
-function openModal() {
-  profileEditNameInput.value = profileName.textContent;
-  profileEditDescriptonInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_opened");
+function openModal(modal) {
+  modal.classList.add("modal_opened");
 }
 
-function closeModal() {
-  profileEditModal.classList.remove("modal_opened");
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = profileEditNameInput.value;
   profileDescription.textContent = profileEditDescriptonInput.value;
-  closeModal();
+  closeModal(profileEditModal);
 }
 
-profileEditButton.addEventListener("click", openModal);
-profileEditModalCloseBtn.addEventListener("click", closeModal);
+function handleProfileAddSubmit(evt) {
+  evt.preventDefault();
+  const InputValues = {
+    link: profileAddImageInput.value,
+    name: profileAddCaptionInput.value,
+  };
+  const cardElement = getCardElement(InputValues);
+  cardsList.prepend(cardElement);
+  closeModal(profileAddModal);
+}
+
+profileEditButton.addEventListener("click", () => {
+  profileEditNameInput.value = profileName.textContent;
+  profileEditDescriptonInput.value = profileDescription.textContent;
+  openModal(profileEditModal);
+});
+profileEditModalCloseBtn.addEventListener("click", () => {
+  closeModal(profileEditModal);
+});
+
+profileAddButton.addEventListener("click", () => {
+  openModal(profileAddModal);
+});
+profileAddModalCloseBtn.addEventListener("click", () => {
+  closeModal(profileAddModal);
+});
+
 profileForm.addEventListener("submit", handleProfileFormSubmit);
+profileAddForm.addEventListener("submit", handleProfileAddSubmit);
 
-for (let i = 0; i < initialcards.length; i++) {
-  const cardElement = getCardElement(initialcards[i]);
+initialCards.forEach((item) => {
+  const cardElement = getCardElement(item);
   cardsList.append(cardElement);
-}
+});
