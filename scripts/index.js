@@ -50,7 +50,7 @@ const profileEditDescriptonInput = profileEditModal.querySelector(
 const profileAddModal = document.querySelector("#profile-add-modal");
 const profileAddModalCloseBtn =
   profileAddModal.querySelector(".modal__close-btn");
-const profileAddForm = document.forms["profile-add-form"];
+const cardAddForm = document.forms["profile-add-form"];
 const profileAddImageInput = profileAddModal.querySelector(
   "#profile-add-image-input"
 );
@@ -127,7 +127,7 @@ function handleProfileAddSubmit(evt) {
   };
   const cardElement = getCardElement(InputValues);
   cardsList.prepend(cardElement);
-  closeModal(profileAddModal);
+  evt.target.reset();
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -152,7 +152,7 @@ previewCloseButton.addEventListener("click", () => {
 });
 
 profileForm.addEventListener("submit", handleProfileFormSubmit);
-profileAddForm.addEventListener("submit", handleProfileAddSubmit);
+cardAddForm.addEventListener("submit", handleProfileAddSubmit);
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
