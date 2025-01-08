@@ -181,13 +181,23 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-    max-width: 280px;
+    max-width: 288px;
     padding: 12px;
   }
 
   .modal__container_preview {
-    max-width: 280px;
+    max-width: 288px;
     padding: unset;
+  }
+
+  .modal__image_preview {
+    max-width: 288px;
+  }
+
+  .modal__caption_preview {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
   }
 
   .modal__title {
@@ -228,6 +238,6 @@
   }
 
   .modal__submit-btn {
-    width: 276px;
+    width: 264px;
   }
 }

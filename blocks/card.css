@@ -21,6 +21,7 @@
   margin: 10px 10px 0 371px;
   border: none;
   z-index: 1;
+  cursor: pointer;
 }
 
 .card__delete-btn:hover {
@@ -62,15 +63,18 @@
   cursor: pointer;
   opacity: 1;
   background: transparent url(../images/darkblackheart.svg) center no-repeat;
+  background-size: contain;
 }
 
 .card__like-btn_liked {
   background: transparent url(../images/darkredheart.svg) center no-repeat;
   opacity: 1;
+  background-size: contain;
 }
 
 .card__like-btn_liked:hover {
   background: transparent url(../images/lightredheart.svg) center no-repeat;
+  background-size: contain;
 }
 
 @media screen and (max-width: 627px) {
