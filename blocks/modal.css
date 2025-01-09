@@ -191,7 +191,7 @@
   }
 
   .modal__image_preview {
-    max-width: 288px;
+    width: 100%;
   }
 
   .modal__caption_preview {

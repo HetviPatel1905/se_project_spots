@@ -127,6 +127,7 @@ function handleProfileAddSubmit(evt) {
   };
   const cardElement = getCardElement(InputValues);
   cardsList.prepend(cardElement);
+  closeModal(profileAddModal);
   evt.target.reset();
 }
 
