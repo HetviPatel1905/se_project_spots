@@ -183,15 +183,21 @@
   .modal__container {
     max-width: 288px;
     padding: 12px;
+    margin: 0 -8px 0 0;
   }
 
-  .modal__container_preview {
+  /*.modal__container_preview {
     max-width: 288px;
-    padding: unset;
-  }
+  }*/
 
   .modal__image_preview {
-    width: 100%;
+    width: 288px;
+    max-width: 100vw;
+  }
+
+  .modal__caption_wrapper {
+    width: 288px;
+    max-width: 100vw;
   }
 
   .modal__caption_preview {
