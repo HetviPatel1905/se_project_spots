@@ -59,12 +59,12 @@ const profileAddCaptionInput = profileAddModal.querySelector(
 );
 
 const previewModal = document.querySelector("#preview-modal");
-const previewModalImage = previewModal.querySelector(".modal__image_preview");
+const previewModalImage = previewModal.querySelector(".modal__image-preview");
 const previewModalCaption = previewModal.querySelector(
-  ".modal__caption_preview"
+  ".modal__caption-preview"
 );
 const previewCloseButton = previewModal.querySelector(
-  ".modal__close-btn_preview"
+  ".modal__close-btn-preview"
 );
 
 // card

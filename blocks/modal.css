@@ -30,9 +30,8 @@
   border-radius: 8px;
 }
 
-.modal__container_preview {
+.modal__container-preview {
   max-width: fit-content;
-  height: 80%;
   width: 80vw;
   padding: 0;
   display: flex;
@@ -43,7 +42,7 @@
   position: relative;
 }
 
-.modal__image_preview {
+.modal__image-preview {
   object-fit: cover;
   max-width: 80vw;
   max-height: 80vh;
@@ -68,7 +67,7 @@
   margin: 0;
 }
 
-.modal__close-btn_preview {
+.modal__close-btn-preview {
   background: transparent url(../images/previewclosebtn.svg) center no-repeat;
   top: 0;
   right: -52.5px;
@@ -81,17 +80,17 @@
   cursor: pointer;
 }
 
-.modal__close-btn_preview:hover {
+.modal__close-btn-preview:hover {
   opacity: 0.4;
 }
 
-.modal__caption_wrapper {
+.modal__caption-wrapper {
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
 
-.modal__caption_preview {
+.modal__caption-preview {
   color: white;
   background-color: rgba(33, 33, 33, 1);
   padding: 4px 8px;
@@ -186,21 +185,22 @@
     margin: 0 -8px 0 0;
   }
 
-  /*.modal__container_preview {
-    max-width: 288px;
-  }*/
+  .modal__container-preview {
+    justify-content: center;
+  }
 
-  .modal__image_preview {
+  .modal__image-preview {
+    width: 288px;
+    max-width: 100vw;
+    height: auto;
+  }
+
+  .modal__caption-wrapper {
     width: 288px;
     max-width: 100vw;
   }
 
-  .modal__caption_wrapper {
-    width: 288px;
-    max-width: 100vw;
-  }
-
-  .modal__caption_preview {
+  .modal__caption-preview {
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -220,9 +220,9 @@
     right: 12px;
   }
 
-  .modal__close-btn_preview {
+  .modal__close-btn-preview {
     top: -40px;
-    left: calc(100% - 15%);
+    left: calc(100% - 9%);
   }
 
   .modal__label {
