@@ -30,19 +30,16 @@
   border-radius: 8px;
 }
 
-.modal__container-preview {
+.modal__container_type_preview {
   max-width: fit-content;
   width: 80vw;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: transparent;
   overflow: unset;
   position: relative;
 }
 
-.modal__image-preview {
+.modal__image {
   object-fit: cover;
   max-width: 80vw;
   max-height: 80vh;
@@ -67,7 +64,7 @@
   margin: 0;
 }
 
-.modal__close-btn-preview {
+.modal__close-btn_type_preview {
   background: transparent url(../images/previewclosebtn.svg) center no-repeat;
   top: 0;
   right: -52.5px;
@@ -80,23 +77,18 @@
   cursor: pointer;
 }
 
-.modal__close-btn-preview:hover {
+.modal__close-btn_type_preview:hover {
   opacity: 0.4;
 }
 
-.modal__caption-wrapper {
+.modal__caption {
+  max-width: fit-content;
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.modal__caption-preview {
+  margin: 0;
+  padding: 4px 8px;
   color: white;
   background-color: rgba(33, 33, 33, 1);
-  padding: 4px 8px;
   border: none;
-  margin: 0;
-  display: inline-block;
   border-radius: 4px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -180,27 +172,37 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
     padding: 12px;
     margin: 0 10px;
   }
 
-  .modal__container-preview {
-    justify-content: center;
+  .modal__form {
+    width: 276px;
   }
 
-  .modal__image-preview {
+  .modal__container_type_preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 288px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal__image {
+    align-self: center;
     width: 288px;
     max-width: 100vw;
     height: auto;
   }
 
-  .modal__caption-wrapper {
+  .modal__caption {
     width: 288px;
-    max-width: 100vw;
-  }
-
-  .modal__caption-preview {
+    white-space: nowrap;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -220,7 +222,7 @@
     right: 12px;
   }
 
-  .modal__close-btn-preview {
+  .modal__close-btn_type_preview {
     top: -40px;
     left: calc(100% - 9%);
   }
