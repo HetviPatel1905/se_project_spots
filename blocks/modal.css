@@ -180,9 +180,9 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-    max-width: 288px;
+    max-width: 300px;
     padding: 12px;
-    margin: 0 -8px 0 0;
+    margin: 0 10px;
   }
 
   .modal__container-preview {
@@ -244,6 +244,6 @@
   }
 
   .modal__submit-btn {
-    width: 264px;
+    width: 276px;
   }
 }
