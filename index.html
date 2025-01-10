@@ -71,20 +71,28 @@
               <input
                 id="profile-name-input"
                 name="name"
+                minlength="2"
+                maxlength="40"
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                required
               />
+              <span class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
               <input
                 id="profile-description-input"
                 name="description"
+                minlength="2"
+                maxlength="200"
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+                required
               />
+              <span class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">
               <span class="modal__submit-btn-text">Save</span>
@@ -106,17 +114,23 @@
                 type="url"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
+              <span class="modal__error"></span>
             </label>
             <label for="profile-add-caption-input" class="modal__label">
               Caption
               <input
                 id="profile-add-caption-input"
                 name="caption"
+                minlength="2"
+                maxlength="30"
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                required
               />
+              <span class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">
               <span class="modal__submit-btn-text">Save</span>
@@ -138,5 +152,6 @@
     </div>
 
     <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/validation.js"></script>
   </body>
 </html>
