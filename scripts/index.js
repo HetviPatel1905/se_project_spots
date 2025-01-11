@@ -104,9 +104,17 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const modalOpened = document.querySelector(".modal_opened");
+    closeModal(modalOpened);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
   modal.addEventListener("click", closeModalByOverlay);
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModalByOverlay(evt) {
@@ -115,6 +123,8 @@ function closeModalByOverlay(evt) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("click", closeModalByOverlay);
+  document.removeEventListener("keydown", handleEscClose);
 }
 
 function handleProfileFormSubmit(evt) {
@@ -136,6 +146,8 @@ function handleProfileAddSubmit(evt) {
   disableButton(cardSubmitButton, settings);
   closeModal(profileAddModal);
 }
+
+function renderCard(item, method = "prepend") {}
 
 profileEditButton.addEventListener("click", () => {
   profileEditNameInput.value = profileName.textContent;
