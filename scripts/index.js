@@ -35,7 +35,7 @@ const profileAddButton = document.querySelector(".profile__add-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-// forms
+// Edit forms
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileEditModalCloseBtn =
   profileEditModal.querySelector(".modal__close-btn");
@@ -47,10 +47,12 @@ const profileEditDescriptonInput = profileEditModal.querySelector(
   "#profile-description-input"
 );
 
+// add card form
 const profileAddModal = document.querySelector("#profile-add-modal");
 const profileAddModalCloseBtn =
   profileAddModal.querySelector(".modal__close-btn");
 const cardAddForm = document.forms["profile-add-form"];
+const cardSubmitButton = profileAddModal.querySelector(".modal__submit-btn");
 const profileAddImageInput = profileAddModal.querySelector(
   "#profile-add-image-input"
 );
@@ -104,6 +106,11 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  modal.addEventListener("click", closeModalByOverlay);
+}
+
+function closeModalByOverlay(evt) {
+  if ((evt.target.contains = "modal")) closeModal(evt.target);
 }
 
 function closeModal(modal) {
@@ -125,13 +132,19 @@ function handleProfileAddSubmit(evt) {
   };
   const cardElement = getCardElement(InputValues);
   cardsList.prepend(cardElement);
-  closeModal(profileAddModal);
   evt.target.reset();
+  disableButton(cardSubmitButton, settings);
+  closeModal(profileAddModal);
 }
 
 profileEditButton.addEventListener("click", () => {
   profileEditNameInput.value = profileName.textContent;
   profileEditDescriptonInput.value = profileDescription.textContent;
+  resetValidation(
+    profileForm,
+    [profileEditNameInput, profileEditDescriptonInput],
+    settings
+  );
   openModal(profileEditModal);
 });
 

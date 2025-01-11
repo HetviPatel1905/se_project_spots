@@ -65,7 +65,12 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit Profile</h2>
-          <form name="edit-profile" class="modal__form" id="profile-form">
+          <form
+            name="edit-profile"
+            class="modal__form"
+            id="profile-form"
+            novalidate
+          >
             <label for="profile-name-input" class="modal__label">
               Name
               <input
@@ -78,7 +83,7 @@
                 placeholder="Type your name"
                 required
               />
-              <span class="modal__error"></span>
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -92,9 +97,16 @@
                 placeholder="Describe yourself"
                 required
               />
-              <span class="modal__error"></span>
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
-            <button type="submit" class="modal__submit-btn">
+            <button
+              type="submit"
+              class="modal__submit-btn modal__submit-btn_disabled"
+              disabled
+            >
               <span class="modal__submit-btn-text">Save</span>
             </button>
           </form>
@@ -105,7 +117,12 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New Post</h2>
-          <form name="edit-profile" class="modal__form" id="profile-add-form">
+          <form
+            name="edit-profile"
+            class="modal__form"
+            id="profile-add-form"
+            novalidate
+          >
             <label for="profile-add-image-input" class="modal__label">
               Image link
               <input
@@ -116,7 +133,10 @@
                 placeholder="Paste a link to the picture"
                 required
               />
-              <span class="modal__error"></span>
+              <span
+                id="profile-add-image-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <label for="profile-add-caption-input" class="modal__label">
               Caption
@@ -130,9 +150,16 @@
                 placeholder="Type your caption"
                 required
               />
-              <span class="modal__error"></span>
+              <span
+                id="profile-add-caption-input-error"
+                class="modal__error"
+              ></span>
             </label>
-            <button type="submit" class="modal__submit-btn">
+            <button
+              type="submit"
+              class="modal__submit-btn modal__submit-btn_disabled"
+              disabled
+            >
               <span class="modal__submit-btn-text">Save</span>
             </button>
           </form>
