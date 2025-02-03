@@ -1,3 +1,12 @@
+import "/src/pages/index.css";
+
+import {
+  resetValidation,
+  settings,
+  enableValidation,
+  disableButton,
+} from "../scripts/validation.js";
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -39,7 +48,7 @@ const profileDescription = document.querySelector(".profile__description");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileEditModalCloseBtn =
   profileEditModal.querySelector(".modal__close-btn");
-const profileForm = document.forms["profile-form"];
+const profileForm = profileEditModal.querySelector("#profile-form");
 const profileEditNameInput = profileEditModal.querySelector(
   "#profile-name-input"
 );
@@ -118,7 +127,7 @@ function openModal(modal) {
 }
 
 function closeModalByOverlay(evt) {
-  if ((evt.target.contains = "modal")) closeModal(evt.target);
+  if ((evt.target.classList.contains = "modal")) closeModal(evt.target);
 }
 
 function closeModal(modal) {
@@ -146,8 +155,6 @@ function handleProfileAddSubmit(evt) {
   disableButton(cardSubmitButton, settings);
   closeModal(profileAddModal);
 }
-
-function renderCard(item, method = "prepend") {}
 
 profileEditButton.addEventListener("click", () => {
   profileEditNameInput.value = profileName.textContent;
@@ -182,3 +189,5 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+enableValidation(settings);
