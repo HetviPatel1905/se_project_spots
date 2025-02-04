@@ -34,7 +34,7 @@ module.exports = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env"],
-            // ignore: ["node_modules/terser/dist/bundle.min.js"],
+            ignore: ["node_modules/terser/dist/bundle.min.js"],
           },
         },
       },
@@ -61,6 +61,7 @@ module.exports = {
     fallback: {
       vm: require.resolve("vm-browserify"),
       util: require.resolve("util/"),
+      path: require.resolve("path-browserify"),
     },
   },
 

@@ -16,9 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.18.9",
-    "@babel/preset-env": "7.18.9",
+    "@babel/preset-env": "^7.18.9",
     "autoprefixer": "10.4.7",
-    "babel-loader": "8.2.5",
+    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "4.0.0",
     "css-loader": "6.7.1",
     "cssnano": "5.1.12",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "core-js": "3.23.5",
+    "path-browserify": "^1.0.1",
     "util": "^0.12.5",
     "vm-browserify": "^1.1.2"
   }
