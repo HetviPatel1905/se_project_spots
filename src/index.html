@@ -10,29 +10,43 @@
       name="description"
       content="A social media app to share your photos and engage with other people around the world."
     />
-    <link rel="stylesheet" href="./pages/index.css" />
+
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logoo.svg" alt="spots logo" class="header__logo" />
+        <img class="header__logo" src="<%= require('./images/logoo.svg')%>" />
       </header>
 
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="./images/avatar.jpg"
-            alt="Bessie Coleman Avatar"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img
+                class="profile__pencil-icon"
+                alt="Avatar"
+                src="<%=
+              require('./images/edit-avatar.svg')%>"
+              />
+            </button>
+            <img
+              class="profile__avatar"
+              alt="Profile"
+              src="<%=require('./images/avatar.jpg')%>"
+            />
+          </div>
 
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/pencil.svg" alt="Edit button icon" />
+              <img
+                class="profile__edit-img"
+                alt="Edit button icon"
+                src="<%=require('./images/pencil.svg')%>"
+              />
               <span class="profile__edit-text">Edit Profile</span>
             </button>
           </div>
@@ -178,7 +192,35 @@
       </div>
     </div>
 
-    <script defer src="./scripts/index.js"></script>
-    <script defer src="./scripts/validation.js"></script>
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button
+          type="button"
+          class="modal__close-btn avatar-close-btn"
+        ></button>
+        <h2 class="modal__title">Edit profile avatar</h2>
+        <form name="edit-profile" class="modal__form" id="avatar-form">
+          <label for="profile-avatar-input" class="modal__label">
+            Profile Picture
+            <input
+              id="profile-avatar-input"
+              name="avatar"
+              type="url"
+              class="modal__input"
+              placeholder="Paste the link to an image"
+              required
+            />
+            <span id="profile-avatar-input-error" class="modal__error"></span>
+          </label>
+          <button
+            type="submit"
+            class="modal__submit-btn modal__submit-btn_disabled"
+            disabled
+          >
+            <span class="modal__submit-btn-text">Save</span>
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

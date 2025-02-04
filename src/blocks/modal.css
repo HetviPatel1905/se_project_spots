@@ -98,7 +98,6 @@
 
 .modal__title {
   margin: 0 0 32px;
-  width: 169px;
   height: 32px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 32px;
@@ -228,7 +227,6 @@
   .modal__title {
     padding: 10px 0 10px;
     margin: 0 0 24px;
-    width: 106px;
     height: 20px;
     font-size: 20px;
     line-height: 20px;
