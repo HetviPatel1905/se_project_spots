@@ -22,12 +22,23 @@
 
       <main class="content">
         <section class="profile page__section">
-          <img
-            class="profile__avatar"
-            alt="Bessie Coleman Avatar"
-            src="<%=
-          require('./images/avatar.jpg')%>"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img
+              class="profile__pencil-icon"
+              alt="Avatar"
+              src="<%=
+              require('./images/edit-avatar.svg')%>"
+            />
+            </button>
+            <img
+              class="profile__avatar"
+              alt="Bessie Coleman Avatar"
+              src="<%=
+            require('./images/avatar.jpg')%>"
+            />
+          </div>
+
 
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
@@ -183,5 +194,73 @@
         <p class="modal__caption"></p>
       </div>
     </div>
+
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button aria-label="Close modal" type="button" class="modal__close-btn"></button>
+        <h3 class="modal__title">Edit Avatar</h3>
+        <form
+          name="edit-avatar-form"
+          class="modal__form"
+          id="edit-avatar-form"
+        >
+          <label for="profile-avatar-input" class="modal__label">
+            Avatar
+            <input
+              id="profile-avatar-input"
+              name="avatar"
+              class="modal__input"
+              placeholder="Paste a link to the picture"
+              required
+            />
+            <span
+              id="profile-avatar-input-error"
+              class="modal__error"
+            ></span>
+          </label>
+          <button
+            type="submit"
+            class="modal__submit-btn modal__submit-btn_disabled"
+          >
+            <span class="modal__submit-btn-text">Save</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="avatar-modal">
+    <div class="modal__container">
+      <button type="button" class="modal__close-btn"></button>
+      <h2 class="modal__title">Edit profile avatar</h2>
+      <form
+        name="edit-avatar"
+        class="modal__form"
+        id="avatar-form"
+        novalidate
+      >
+        <label for="profile-avatar-input" class="modal__label">
+          Profile Picture
+          <input
+            id="profile-avatar-input"
+            name="avatar"
+            class="modal__input"
+            placeholder="Paste the link to an image"
+            required
+          />
+          <span id="profile-avatar-input-error" class="modal__error"></span>
+        </label>
+        <button
+          type="submit"
+          class="modal__submit-btn modal__submit-btn_disabled"
+          disabled
+        >
+          <span class="modal__submit-btn-text">Save</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
   </body>
 </html>

@@ -29,8 +29,14 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: "babel-loader",
         exclude: "/node_modules/",
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+            // ignore: ["node_modules/terser/dist/bundle.min.js"],
+          },
+        },
       },
       {
         test: /\.css$/,
@@ -51,6 +57,13 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    fallback: {
+      vm: require.resolve("vm-browserify"),
+      util: require.resolve("util/"),
+    },
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",

@@ -12,7 +12,7 @@
     "url": "git+https://github.com/HetviPatel1905/se_project_spots.git"
   },
   "keywords": [],
-  "author": "Hetvi Patel",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.18.9",
@@ -30,6 +30,8 @@
     "webpack-dev-server": "4.9.3"
   },
   "dependencies": {
-    "core-js": "3.23.5"
+    "core-js": "3.23.5",
+    "util": "^0.12.5",
+    "vm-browserify": "^1.1.2"
   }
 }
