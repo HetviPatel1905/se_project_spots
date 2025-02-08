@@ -203,24 +203,31 @@
   margin-top: 32px;
 }
 
-#modal__delete-btn1 {
+#modal__delete-confirm-btn1 {
   background-color: rgba(255, 101, 101, 1);
 }
 
-#modal__delete-btn2 {
+#modal__delete-cancel-btn2 {
   background-color: #fff;
   border: 1px solid rgba(33, 33, 33, 1);
 }
 
-#modal__delete-btn1,
-#modal__delete-btn2 {
+#modal__delete-confirm-btn1,
+#modal__delete-cancel-btn2 {
   border-radius: 8px;
   height: 52px;
   width: 156px;
+  cursor: pointer;
 }
 
 .modal__delete-btn-text {
   color: black;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  width: 40px;
+  height: 16px;
 }
 
 @media screen and (max-width: 627px) {
@@ -280,16 +287,6 @@
     gap: 12px;
     margin-top: 20px;
     margin-bottom: 12px;
-  }
-
-  .modal__delete-btn1 {
-  }
-
-  .modal__delete-btn2 {
-  }
-
-  .modal__delete-btn1,
-  .modal__delete-btn2 {
   }
 
   .modal__close-btn_type_preview {
