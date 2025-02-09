@@ -257,6 +257,7 @@ function handleDeleteSubmit(evt) {
 
 function handleLike(evt, id) {
   const isLiked = evt.target.classList.contains("card__like-btn_liked");
+  console.log(id);
 
   api
     .handleLikeStatus(id, isLiked)
