@@ -191,11 +191,7 @@ function handleProfileAddSubmit(evt) {
       link: profileAddImageInput.value,
     })
     .then((data) => {
-      const InputValues = {
-        link: data.link,
-        name: data.name,
-      };
-      const cardElement = getCardElement(InputValues);
+      const cardElement = getCardElement(data);
       cardsList.prepend(cardElement);
 
       disableButton(cardSubmitButton, settings);
@@ -210,7 +206,6 @@ function handleProfileAddSubmit(evt) {
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
-  debugger;
 
   const submitBtn = evt.submitter;
   setButtonText(submitBtn, true);
@@ -218,15 +213,14 @@ function handleAvatarSubmit(evt) {
   api
     .setNewAvatar(avatarInput.value)
     .then((data) => {
-      const avatarElement = document.querySelector(".profile__avatar");
       if (data.avatar) {
-        avatarElement.src = data.avatar;
+        profileAvatar.src = data.avatar;
       } else {
         console.error("No avatar URL returned from the API");
       }
 
-      evt.target.reset();
       disableButton(cardSubmitButton, settings);
+      evt.target.reset();
       closeModal(avatarModal);
     })
     .catch(console.error)
