@@ -25,7 +25,7 @@ api
       const cardElement = getCardElement(item);
       cardsList.append(cardElement);
     });
-    console.log(users);
+
     profileName.textContent = users.name;
     profileDescription.textContent = users.about;
     profileAvatar.src = users.avatar;
@@ -49,6 +49,9 @@ const avatarModal = document.querySelector("#avatar-modal");
 const avatarForm = avatarModal.querySelector("#avatar-form");
 const avatarInput = avatarModal.querySelector("#profile-avatar-input");
 const avatarCloseButton = avatarModal.querySelector(".avatar-close-btn");
+const avatarSubmitButton = avatarModal.querySelector(
+  ".modal__submit_avatar-btn"
+);
 
 // Edit forms
 const profileEditModal = document.querySelector("#profile-edit-modal");
@@ -219,7 +222,8 @@ function handleAvatarSubmit(evt) {
         console.error("No avatar URL returned from the API");
       }
 
-      disableButton(cardSubmitButton, settings);
+      disableButton(avatarSubmitButton, settings);
+
       evt.target.reset();
       closeModal(avatarModal);
     })
@@ -251,7 +255,6 @@ function handleDeleteSubmit(evt) {
 
 function handleLike(evt, id) {
   const isLiked = evt.target.classList.contains("card__like-btn_liked");
-  console.log(id);
 
   api
     .handleLikeStatus(id, isLiked)
