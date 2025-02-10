@@ -50,7 +50,7 @@ const avatarForm = avatarModal.querySelector("#avatar-form");
 const avatarInput = avatarModal.querySelector("#profile-avatar-input");
 const avatarCloseButton = avatarModal.querySelector(".avatar-close-btn");
 const avatarSubmitButton = avatarModal.querySelector(
-  ".modal__submit_avatar-btn"
+  "#modal__submit_avatar-btn"
 );
 
 // Edit forms
@@ -186,6 +186,7 @@ function handleProfileAddSubmit(evt) {
   evt.preventDefault();
 
   const submitBtn = evt.submitter;
+  console.log(submitBtn);
   setButtonText(submitBtn, true);
 
   api
@@ -210,26 +211,26 @@ function handleProfileAddSubmit(evt) {
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
 
-  const submitBtn = evt.submitter;
-  setButtonText(submitBtn, true);
+  // const submitBtn = evt.submitter;
+  // console.log(submitBtn);
+  // setButtonText(submitBtn, true);
+
+  const submitBtn = document.getElementById("modal__avatar-btn-text");
+  submitBtn.textContent = "Saving...";
 
   api
     .setNewAvatar(avatarInput.value)
     .then((data) => {
-      if (data.avatar) {
-        profileAvatar.src = data.avatar;
-      } else {
-        console.error("No avatar URL returned from the API");
-      }
-
-      disableButton(avatarSubmitButton, settings);
+      profileAvatar.src = data.avatar;
 
       evt.target.reset();
+      disableButton(avatarSubmitButton, settings);
       closeModal(avatarModal);
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(submitBtn, false);
+      submitBtn.textContent = "Save";
+      // setButtonText(submitBtn, true);
     });
 }
 
