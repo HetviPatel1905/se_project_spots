@@ -11,10 +11,6 @@ class Api {
     return Promise.reject(`Error: ${res.status}`);
   }
 
-  _request(url, options) {
-    return fetch(url, options).then(this._checkResponse);
-  }
-
   getAppInfo() {
     return Promise.all([this.getInitialCards(), this.getUserInfo()]);
   }

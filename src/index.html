@@ -116,12 +116,8 @@
                 class="modal__error"
               ></span>
             </label>
-            <button
-              type="submit"
-              class="modal__submit-btn modal__submit-btn_disabled"
-              disabled
-            >
-              <span class="modal__submit-btn-text">Save</span>
+            <button type="submit" class="modal__btn modal__submit-btn">
+              Save
             </button>
           </form>
         </div>
@@ -169,12 +165,8 @@
                 class="modal__error"
               ></span>
             </label>
-            <button
-              type="submit"
-              class="modal__submit-btn modal__submit-btn_disabled"
-              disabled
-            >
-              <span class="modal__submit-btn-text">Save</span>
+            <button type="submit" class="modal__btn modal__submit-btn">
+              Save
             </button>
           </form>
         </div>
@@ -205,23 +197,15 @@
             <input
               id="profile-avatar-input"
               name="avatar"
-              type="text"
+              type="url"
               class="modal__input"
               placeholder="Paste the link to an image"
               required
             />
             <span id="profile-avatar-input-error" class="modal__error"></span>
           </label>
-          <button
-            type="submit"
-            class="modal__submit-btn modal__submit-btn_disabled"
-            id="modal__submit_avatar-btn"
-          >
-            <span
-              class="modal__submit-btn-text modal__avatar-btn-text"
-              id="modal__avatar-btn-text"
-              >Save</span
-            >
+          <button type="submit" class="modal__btn modal__submit-btn">
+            Save
           </button>
         </form>
       </div>
@@ -240,21 +224,16 @@
           <div class="modal__delete-btn">
             <button
               type="submit"
-              class="modal__submit-btn modal__submit-btn_disabled"
-              id="modal__delete-confirm-btn1"
+              class="modal__btn modal__submit-btn modal__delete_submit-btn"
             >
-              <span
-                class="modal__submit-btn-text modal__delete-btn-text"
-                id="modal__delete-btn-text"
-                >Delete</span
-              >
+              Delete
             </button>
             <button
               type="button"
-              class="modal__submit-btn modal__submit-btn_disabled"
-              id="modal__delete-cancel-btn2"
+              class="modal__btn modal__submit-btn"
+              id="modal__cancel-btn"
             >
-              <span class="modal__delete-btn-text">Cancel</span>
+              Cancel
             </button>
           </div>
         </form>

@@ -70,7 +70,7 @@ const profileAddModal = document.querySelector("#profile-add-modal");
 const profileAddModalCloseBtn =
   profileAddModal.querySelector(".modal__close-btn");
 const cardAddForm = document.forms["profile-add-form"];
-const cardSubmitButton = profileAddModal.querySelector(".modal__submit-btn");
+const cardSubmitButton = profileAddModal.querySelector(".modal__btn");
 const profileAddImageInput = profileAddModal.querySelector(
   "#profile-add-image-input"
 );
@@ -95,7 +95,7 @@ let selectedCardId;
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector("#delete-form");
 const deleteCloseButton = deleteModal.querySelector(".delete-close-btn");
-const deleteCancelButton = document.getElementById("modal__delete-cancel-btn2");
+const deleteCancelButton = document.getElementById("modal__cancel-btn");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -198,7 +198,7 @@ function handleProfileAddSubmit(evt) {
       const cardElement = getCardElement(data);
       cardsList.prepend(cardElement);
 
-      disableButton(cardSubmitButton, settings);
+      disableButton(submitBtn, settings);
       evt.target.reset();
       closeModal(profileAddModal);
     })
@@ -211,12 +211,8 @@ function handleProfileAddSubmit(evt) {
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
 
-  // const submitBtn = evt.submitter;
-  // console.log(submitBtn);
-  // setButtonText(submitBtn, true);
-
-  const submitBtn = document.getElementById("modal__avatar-btn-text");
-  submitBtn.textContent = "Saving...";
+  const submitBtn = evt.submitter;
+  setButtonText(submitBtn, true);
 
   api
     .setNewAvatar(avatarInput.value)
@@ -224,20 +220,19 @@ function handleAvatarSubmit(evt) {
       profileAvatar.src = data.avatar;
 
       evt.target.reset();
-      disableButton(avatarSubmitButton, settings);
+      disableButton(submitBtn, settings);
       closeModal(avatarModal);
     })
     .catch(console.error)
     .finally(() => {
-      submitBtn.textContent = "Save";
-      // setButtonText(submitBtn, true);
+      setButtonText(submitBtn, false);
     });
 }
 
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
 
-  const submitBtn = document.getElementById("modal__delete-btn-text");
+  const submitBtn = evt.submitter;
   submitBtn.textContent = "Deleting...";
 
   api
