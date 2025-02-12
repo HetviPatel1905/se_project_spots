@@ -188,9 +188,9 @@
 }
 
 .modal__delete_submit-btn {
-  border: none;
   color: #000;
   background-color: #ff6565;
+  border: none;
 }
 
 .modal__delete_submit-btn:hover {
@@ -201,6 +201,7 @@
 #modal__cancel-btn {
   color: #000;
   background-color: #fff;
+  border: 1px solid black;
 }
 
 #modal__cancel-btn:hover {

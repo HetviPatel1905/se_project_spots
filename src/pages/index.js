@@ -48,7 +48,7 @@ const avatarButton = document.querySelector(".profile__avatar-btn");
 const avatarModal = document.querySelector("#avatar-modal");
 const avatarForm = avatarModal.querySelector("#avatar-form");
 const avatarInput = avatarModal.querySelector("#profile-avatar-input");
-const avatarCloseButton = avatarModal.querySelector(".avatar-close-btn");
+const avatarCloseButton = avatarModal.querySelector(".modal__close-btn");
 const avatarSubmitButton = avatarModal.querySelector(
   "#modal__submit_avatar-btn"
 );
@@ -94,7 +94,7 @@ let selectedCardId;
 // delete card
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector("#delete-form");
-const deleteCloseButton = deleteModal.querySelector(".delete-close-btn");
+const deleteCloseButton = deleteModal.querySelector(".modal__close-btn");
 const deleteCancelButton = document.getElementById("modal__cancel-btn");
 
 function getCardElement(data) {
@@ -273,24 +273,24 @@ profileEditButton.addEventListener("click", () => {
   openModal(profileEditModal);
 });
 
-profileEditModalCloseBtn.addEventListener("click", () => {
-  closeModal(profileEditModal);
-});
-
 profileAddButton.addEventListener("click", () => {
   openModal(profileAddModal);
+});
+
+avatarButton.addEventListener("click", () => {
+  openModal(avatarModal);
 });
 
 profileAddModalCloseBtn.addEventListener("click", () => {
   closeModal(profileAddModal);
 });
 
-previewCloseButton.addEventListener("click", () => {
-  closeModal(previewModal);
+profileEditModalCloseBtn.addEventListener("click", () => {
+  closeModal(profileEditModal);
 });
 
-avatarButton.addEventListener("click", () => {
-  openModal(avatarModal);
+previewCloseButton.addEventListener("click", () => {
+  closeModal(previewModal);
 });
 
 avatarCloseButton.addEventListener("click", () => {
@@ -298,6 +298,10 @@ avatarCloseButton.addEventListener("click", () => {
 });
 
 deleteCancelButton.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
+
+deleteCloseButton.addEventListener("click", () => {
   closeModal(deleteModal);
 });
 
