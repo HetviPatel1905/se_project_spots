@@ -187,24 +187,24 @@
   margin-top: 20px;
 }
 
-.modal__delete_submit-btn {
+.modal__submit-btn_type_delete {
   color: #000;
   background-color: #ff6565;
   border: none;
 }
 
-.modal__delete_submit-btn:hover {
+.modal__submit-btn_type_delete:hover {
   color: #000;
   background-color: #ff3333;
 }
 
-#modal__cancel-btn {
+#modal__submit-btn_type_cancel {
   color: #000;
   background-color: #fff;
   border: 1px solid black;
 }
 
-#modal__cancel-btn:hover {
+#modal__submit-btn_type_cancel:hover {
   color: #fff;
   background-color: #212121;
 }

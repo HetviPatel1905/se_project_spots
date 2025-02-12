@@ -95,7 +95,9 @@ let selectedCardId;
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector("#delete-form");
 const deleteCloseButton = deleteModal.querySelector(".modal__close-btn");
-const deleteCancelButton = document.getElementById("modal__cancel-btn");
+const deleteCancelButton = document.getElementById(
+  "modal__submit-btn_type_cancel"
+);
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
