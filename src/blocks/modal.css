@@ -177,6 +177,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  border: none;
 }
 
 .modal__delete-btn {
@@ -302,7 +303,7 @@
     line-height: 16px;
   }
 
-  .modal__submit-btn {
+  .modal__btn {
     width: 276px;
   }
 }

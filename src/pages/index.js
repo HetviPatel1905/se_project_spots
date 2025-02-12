@@ -130,10 +130,6 @@ function getCardElement(data) {
     handleDeleteCard(cardElement, data._id)
   );
 
-  deleteCloseButton.addEventListener("click", () => {
-    closeModal(deleteModal);
-  });
-
   return cardElement;
 }
 
@@ -219,8 +215,8 @@ function handleAvatarSubmit(evt) {
     .then((data) => {
       profileAvatar.src = data.avatar;
 
-      evt.target.reset();
       disableButton(submitBtn, settings);
+      evt.target.reset();
       closeModal(avatarModal);
     })
     .catch(console.error)
